@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @Controller
-public class WebController {
+public class WebControllerMainPage {
 
     @GetMapping("/")
     public String greeting(Map<String, Object> model) {

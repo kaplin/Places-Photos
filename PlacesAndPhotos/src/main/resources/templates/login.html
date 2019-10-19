@@ -107,7 +107,15 @@
 
   <body>
 
-      <form action="/login" method="post" class="login-form">
+
+      <div th:if="${param.error}">
+      Invalid username and password.
+    </div>
+    <div th:if="${param.logout}">
+      You have been logged out.
+    </div>
+
+      <form th:action="@{/login}" method="post" class="login-form">
         <h1>Login</h1>
 
         <div class="txtb">
